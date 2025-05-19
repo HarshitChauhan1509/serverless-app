@@ -4,6 +4,7 @@ Resources:
   MyLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
+      FunctionName: firstLamda
       Handler: index.handler
       Runtime: nodejs18.x
       Events:
