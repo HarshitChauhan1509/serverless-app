@@ -6,7 +6,7 @@ Resources:
     Properties:
       FunctionName: firstLamda
       Handler: index.handler
-      Runtime: nodejs18.x
+      Runtime: nodejs16.x
       Events:
         Api:
           Type: Api
