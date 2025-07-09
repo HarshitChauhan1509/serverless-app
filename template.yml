@@ -1,15 +1,15 @@
-AWSTemplateFormatVersion: '2010-09-09'
-Transform: AWS::Serverless-2016-10-31
-Resources:
-  MyLambdaFunction:
-    Type: AWS::Serverless::Function
-    Properties:
-      FunctionName: firstLamda
-      Handler: index.handler
-      Runtime: nodejs16.x
-      Events:
-        Api:
-          Type: Api
-          Properties:
-            Path: /hello
-            Method: get
+service: your-service-name
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+  region: us-east-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
