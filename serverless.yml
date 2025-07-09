@@ -1,4 +1,4 @@
-service: your-service-name
+service: firstLamda
 
 provider:
   name: aws
@@ -13,3 +13,10 @@ functions:
       - http:
           path: hello
           method: get
+
+plugins: []
+
+package:
+  individually: true
+
+custom: {}
